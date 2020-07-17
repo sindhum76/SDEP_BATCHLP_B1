@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Elearning Suite">
+  <test name="Create Group and Edit User">
+    <classes>
+      <class name="test.TestRunner"/>
+    </classes>
+  </test> <!-- Create Group and Edit User -->
+</suite> <!-- Elearning Suite -->
