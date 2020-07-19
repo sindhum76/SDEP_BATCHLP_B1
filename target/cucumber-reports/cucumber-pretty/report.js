@@ -106,7 +106,7 @@ formatter.match({
   "location": "Reg_StepDefinition.i_want_to_launch_the_application_with_excel_data(String)"
 });
 formatter.result({
-  "duration": 22331434800,
+  "duration": 9338837400,
   "status": "passed"
 });
 formatter.match({
@@ -123,92 +123,83 @@ formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_user_and_passwd(String,String)"
 });
 formatter.result({
-  "duration": 538688300,
+  "duration": 539662900,
   "status": "passed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_login_button()"
 });
 formatter.result({
-  "duration": 8468486600,
+  "duration": 3275188300,
   "status": "passed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_Social_Network_tab()"
 });
 formatter.result({
-  "duration": 41778361000,
-  "status": "passed"
+  "duration": 2108495100,
+  "error_message": "org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)] because of the following error:\nSyntaxError: Failed to execute \u0027evaluate\u0027 on \u0027Document\u0027: The string \u0027//li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)]\u0027 is not a valid XPath expression.\n  (Session info: chrome\u003d84.0.4147.89)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-00T6P8Q\u0027, ip: \u00279.102.49.86\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_251\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\\Users\\SINDHU~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:55798}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 991818e37af29ea50c9dac6ee4b3c83a\n*** Element info: {Using\u003dxpath, value\u003d//li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:83)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:57)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:437)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdefinitions.Reg_StepDefinition.i_click_on_the_Social_Network_tab(Reg_StepDefinition.java:171)\r\n\tat ✽.Then I click on the Social Network tab(reg_excel.feature:10)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_Social_Groups()"
 });
 formatter.result({
-  "duration": 1677725400,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_Create_a_social_group()"
 });
 formatter.result({
-  "duration": 1097731300,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_name_and_click_on_Add()"
 });
 formatter.result({
-  "duration": 7918448100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_Admin_tab()"
 });
 formatter.result({
-  "duration": 819071600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_User_List()"
 });
 formatter.result({
-  "duration": 5341730100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_username_and_click_on_Search_button()"
 });
 formatter.result({
-  "duration": 1341477700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_edit_link()"
 });
 formatter.result({
-  "duration": 2300060500,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_clear_email_text_and_enter_the_new_email_address()"
 });
 formatter.result({
-  "duration": 549570000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_the_inactive_radio_button_and_save_the_changes()"
 });
 formatter.result({
-  "duration": 1980762200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_quit_the_session()"
 });
 formatter.result({
-  "duration": 916983700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.uri("registration.feature");
 formatter.feature({
@@ -318,7 +309,7 @@ formatter.match({
   "location": "Reg_StepDefinition.i_want_to_launch_the_application(String)"
 });
 formatter.result({
-  "duration": 13475021600,
+  "duration": 7601950000,
   "status": "passed"
 });
 formatter.match({
@@ -335,36 +326,35 @@ formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 402965500,
+  "duration": 635730400,
   "status": "passed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_the_login_button()"
 });
 formatter.result({
-  "duration": 10572687800,
+  "duration": 2910794100,
   "status": "passed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_Social_Network_tab()"
 });
 formatter.result({
-  "duration": 5449780100,
-  "status": "passed"
+  "duration": 2107260700,
+  "error_message": "org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)] because of the following error:\nSyntaxError: Failed to execute \u0027evaluate\u0027 on \u0027Document\u0027: The string \u0027//li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)]\u0027 is not a valid XPath expression.\n  (Session info: chrome\u003d84.0.4147.89)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-00T6P8Q\u0027, ip: \u00279.102.49.86\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_251\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\\Users\\SINDHU~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:55825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: b00547e26ac88cb031e1da751c7d2a88\n*** Element info: {Using\u003dxpath, value\u003d//li[@class\u003d\u0027social-network active\u0027]//following:://a[contains(text(),\u0027Social network\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:83)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:57)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:437)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat stepdefinitions.Reg_StepDefinition.i_click_on_Social_Network_tab(Reg_StepDefinition.java:73)\r\n\tat ✽.Then I click on Social Network tab(registration.feature:10)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_Social_Groups()"
 });
 formatter.result({
-  "duration": 1276935300,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_Create_a_social_group()"
 });
 formatter.result({
-  "duration": 996480800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -376,22 +366,19 @@ formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_name_and_click_on_Add(String)"
 });
 formatter.result({
-  "duration": 6275788700,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_admin_tab()"
 });
 formatter.result({
-  "duration": 837581000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_user_list()"
 });
 formatter.result({
-  "duration": 4978145800,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -403,15 +390,13 @@ formatter.match({
   "location": "Reg_StepDefinition.i_enter_the_username_and_click_on_Search_button(String)"
 });
 formatter.result({
-  "duration": 1736390900,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_edit_link()"
 });
 formatter.result({
-  "duration": 2271561100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -423,21 +408,18 @@ formatter.match({
   "location": "Reg_StepDefinition.i_clear_email_text_and_enter_the_new_email_address(String)"
 });
 formatter.result({
-  "duration": 426706600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_click_on_inactive_radio_button_and_save_the_changes()"
 });
 formatter.result({
-  "duration": 3018482200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "Reg_StepDefinition.i_close_the_session()"
 });
 formatter.result({
-  "duration": 1100184200,
-  "status": "passed"
+  "status": "skipped"
 });
 });

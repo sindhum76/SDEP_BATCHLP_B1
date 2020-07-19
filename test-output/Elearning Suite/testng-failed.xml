@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Elearning Suite]">
+  <test name="Create Group and Edit User">
+    <classes>
+      <class name="test.TestRunner"/>
+    </classes>
+  </test> <!-- Create Group and Edit User -->
+  <test name="Create Group and Edit User(failed)">
+    <classes>
+      <class name="test.TestRunner">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- test.TestRunner -->
+    </classes>
+  </test> <!-- Create Group and Edit User(failed) -->
+</suite> <!-- Failed suite [Elearning Suite] -->

@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import common.wrapper;
 
 public class Reg_StepDefinition {
 	static WebDriver driver;
@@ -54,42 +55,42 @@ public class Reg_StepDefinition {
 
 	@Then("^I enter the username \"([^\"]*)\" and password \"([^\"]*)\"$")
 	public void i_enter_the_username_and_password(String username, String password) throws Throwable {
-		driver.findElement(By.xpath("//input[@id='login']")).clear();
-	    driver.findElement(By.xpath("//input[@id='login']")).sendKeys(username);
-	    driver.findElement(By.xpath("//input[@id='password']")).clear();
-	    driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
+		driver.findElement(By.xpath(wrapper.getPropValue("UserLink"))).clear();
+	    driver.findElement(By.xpath(wrapper.getPropValue("UserLink"))).sendKeys(username);
+	    driver.findElement(By.xpath(wrapper.getPropValue("PassLink"))).clear();
+	    driver.findElement(By.xpath(wrapper.getPropValue("PassLink"))).sendKeys(password);
 	}
 
 	@Then("^I click the login button$")
 	public void i_click_the_login_button() throws Throwable {
-		driver.findElement(By.xpath("//button[@id='form-login_submitAuth']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("LoginLink"))).click();
 	    
 	}
 
 	@Then("^I click on Social Network tab$")
 	public void i_click_on_Social_Network_tab() throws Throwable {
 		Thread.sleep(2000);
-		driver.findElement(By.partialLinkText("Social network")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("SocialLink"))).click();
 	    
 	}
 
 	@Then("^I click on Social Groups$")
 	public void i_click_on_Social_Groups() throws Throwable {
-		driver.findElement(By.xpath("//li[contains(@class,'browse-groups-icon')]//a[1]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("SocGrpLink"))).click();
 	    
 	}
 
 	@Then("^I click on Create a social group$")
 	public void i_click_on_Create_a_social_group() throws Throwable {
-		driver.findElement(By.xpath("//a[@class='btn btn-default']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("CreateGrpLink"))).click();
 	   
 	}
 	
 	@Then("^I enter the name \"([^\"]*)\" and click on Add$")
 	public void i_enter_the_name_and_click_on_Add(String grpname) throws Throwable {
-		driver.findElement(By.xpath("//input[@id='add_group_name']")).clear();
-		   driver.findElement(By.xpath("//input[@id='add_group_name']")).sendKeys(grpname);
-		   driver.findElement(By.id("add_group_submit")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("GrpName"))).clear();
+		   driver.findElement(By.xpath(wrapper.getPropValue("GrpName"))).sendKeys(grpname);
+		   driver.findElement(By.id(wrapper.getPropValue("GrpSubmit"))).click();
 	}
 
 	
@@ -97,40 +98,40 @@ public class Reg_StepDefinition {
 	
 	@Then("^I click on Admin tab")
 	public void i_click_on_admin_tab() {
-		driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("AdminLink"))).click();
 		
 	}
 	
 	@Then("^I click on User List$")
 	public void i_click_on_user_list() {
-		driver.findElement(By.partialLinkText("User list")).click();
+		driver.findElement(By.partialLinkText(wrapper.getPropValue("UserListLink"))).click();
 		//driver.findElement(By.xpath("//div[@class='panel panel-default block-admin-users']")).click();
 		System.out.println("Clicked on user list");
 	}
 	
 	@Then("^I enter the username \"([^\"]*)\" and click on Search button$")
 	public void i_enter_the_username_and_click_on_Search_button(String user) throws Throwable {
-		driver.findElement(By.id("search_simple_keyword")).clear();
-		driver.findElement(By.id("search_simple_keyword")).sendKeys(user);
-		driver.findElement(By.id("search_simple_submit")).click();
+		driver.findElement(By.id(wrapper.getPropValue("EditUserLink"))).clear();
+		driver.findElement(By.id(wrapper.getPropValue("EditUserLink"))).sendKeys(user);
+		driver.findElement(By.id(wrapper.getPropValue("SearchLink"))).click();
 	}
 	
 	@Then("^I click on edit link$")
 	public void i_click_on_edit_link() throws Throwable {
-		driver.findElement(By.xpath("//tr[2]//td[11]//a[6]//img[1]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("EditLink"))).click();
 	    
 	}
 	
 	@Then("^I clear email text \"([^\"]*)\" and enter the new email address$")
 	public void i_clear_email_text_and_enter_the_new_email_address(String email) throws Throwable {
-		driver.findElement(By.id("user_edit_email")).clear();
-		driver.findElement(By.id("user_edit_email")).sendKeys(email);
+		driver.findElement(By.id(wrapper.getPropValue("EmailLink"))).clear();
+		driver.findElement(By.id(wrapper.getPropValue("EmailLink"))).sendKeys(email);
 	}
 
 	@Then("^I click on inactive radio button and save the changes$")
 	public void i_click_on_inactive_radio_button_and_save_the_changes() throws Throwable {
-		driver.findElement(By.xpath("//label[contains(text(),'inactive')]")).click();
-	    driver.findElement(By.xpath("//button[@id='user_edit_submit']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("InactiveLink"))).click();
+	    driver.findElement(By.xpath(wrapper.getPropValue("SaveLink"))).click();
 	}
 	
 	@Then("^I close the session$")
@@ -152,74 +153,74 @@ public class Reg_StepDefinition {
 
 	@Then("^I enter the user \"([^\"]*)\" and passwd \"([^\"]*)\"$")
 	public void i_enter_the_user_and_passwd(String user, String passwd) throws Throwable {
-		driver.findElement(By.xpath("//input[@id='login']")).clear();
-	    driver.findElement(By.xpath("//input[@id='login']")).sendKeys(user);
-	    driver.findElement(By.xpath("//input[@id='password']")).clear();
-	    driver.findElement(By.xpath("//input[@id='password']")).sendKeys(passwd);
+		driver.findElement(By.xpath(wrapper.getPropValue("UserLink"))).clear();
+	    driver.findElement(By.xpath(wrapper.getPropValue("UserLink"))).sendKeys(user);
+	    driver.findElement(By.xpath(wrapper.getPropValue("PassLink"))).clear();
+	    driver.findElement(By.xpath(wrapper.getPropValue("PassLink"))).sendKeys(passwd);
 	}
 
 	@Then("^I click on the login button$")
 	public void i_click_on_the_login_button() throws Throwable {
-		driver.findElement(By.xpath("//button[@id='form-login_submitAuth']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("LoginLink"))).click();
 	   
 	}
 
 	@Then("^I click on the Social Network tab$")
 	public void i_click_on_the_Social_Network_tab() throws Throwable {
 		Thread.sleep(2000);
-		driver.findElement(By.partialLinkText("Social network")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("SocialLink"))).click();
 	}
 
 	@Then("^I click on the Social Groups$")
 	public void i_click_on_the_Social_Groups() throws Throwable {
-		driver.findElement(By.xpath("//li[contains(@class,'browse-groups-icon')]//a[1]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("SocGrpLink"))).click();
 	}
 
 	@Then("^I click on the Create a social group$")
 	public void i_click_on_the_Create_a_social_group() throws Throwable {
-		driver.findElement(By.xpath("//a[@class='btn btn-default']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("CreateGrpLink"))).click();
 	}
 
 	@Then("^I enter the name and click on Add$")
 	public void i_enter_the_name_and_click_on_Add() throws Throwable {
-		driver.findElement(By.xpath("//input[@id='add_group_name']")).clear();
-		driver.findElement(By.xpath("//input[@id='add_group_name']")).sendKeys(getDataFromExcel(1,0));
-		driver.findElement(By.id("add_group_submit")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("GrpName"))).clear();
+		driver.findElement(By.xpath(wrapper.getPropValue("GrpName"))).sendKeys(getDataFromExcel(1,0));
+		driver.findElement(By.id(wrapper.getPropValue("GrpSubmit"))).click();
 	}
 
 	@Then("^I click on the Admin tab$")
 	public void i_click_on_the_Admin_tab() throws Throwable {
-		driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("AdminLink"))).click();
 	}
 
 	@Then("^I click on the User List$")
 	public void i_click_on_the_User_List() throws Throwable {
-		driver.findElement(By.partialLinkText("User list")).click();
+		driver.findElement(By.partialLinkText(wrapper.getPropValue("UserListLink"))).click();
 	}
 
 	@Then("^I enter the username and click on Search button$")
 	public void i_enter_the_username_and_click_on_Search_button() throws Throwable {
-		driver.findElement(By.id("search_simple_keyword")).clear();
-		driver.findElement(By.id("search_simple_keyword")).sendKeys(getDataFromExcel(1,1));
-		driver.findElement(By.id("search_simple_submit")).click();
+		driver.findElement(By.id(wrapper.getPropValue("EditUserLink"))).clear();
+		driver.findElement(By.id(wrapper.getPropValue("EditUserLink"))).sendKeys(getDataFromExcel(1,1));
+		driver.findElement(By.id(wrapper.getPropValue("SearchLink"))).click();
 	   
 	}
 
 	@Then("^I click on the edit link$")
 	public void i_click_on_the_edit_link() throws Throwable {
-		driver.findElement(By.xpath("//tr[2]//td[11]//a[6]//img[1]")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("EditLink"))).click();
 	}
 
 	@Then("^I clear email text and enter the new email address$")
 	public void i_clear_email_text_and_enter_the_new_email_address() throws Throwable {
-		driver.findElement(By.id("user_edit_email")).clear();
-		driver.findElement(By.id("user_edit_email")).sendKeys(getDataFromExcel(1,2));
+		driver.findElement(By.id(wrapper.getPropValue("EmailLink"))).clear();
+		driver.findElement(By.id(wrapper.getPropValue("EmailLink"))).sendKeys(getDataFromExcel(1,2));
 	}
 
 	@Then("^I click on the inactive radio button and save the changes$")
 	public void i_click_on_the_inactive_radio_button_and_save_the_changes() throws Throwable {
-		driver.findElement(By.xpath("//label[contains(text(),'inactive')]")).click();
-		driver.findElement(By.xpath("//button[@id='user_edit_submit']")).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("InactiveLink"))).click();
+		driver.findElement(By.xpath(wrapper.getPropValue("SaveLink"))).click();
 	}
 
 	@Then("^I quit the session$")
