@@ -6,15 +6,4 @@
       <class name="test.TestRunner"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="test.TestRunner">
-        <methods>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- test.TestRunner -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
